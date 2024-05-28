@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloo Clicker.play</title>
+    <style>
+        #main {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="score">0</h1>
+        <img src="Circle.png" alt="circle" id="button">
+    </div>
+
+    <script>
+      let counter = 0;
+      
+      document.getElementById('button').onclick = () => {
+        counter = counter + 1;
+        document.getElementById('score').innerText = counter;
+      };
+    </script>
+</body>
+</html>
