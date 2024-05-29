@@ -20,7 +20,7 @@
 </head>
 <body>
     <div id="main" data-bs-theme="dark">
-        <h1 id="score">0</h1>
+        <h1 id="score"><br/></h1>
         <img src="Circle.png" alt="circle" id="button">
     </div>
 
@@ -28,6 +28,7 @@
       let counter = 0;
       if (localStorage.box) {
         counter =  Number(localStorage.box);
+        document.getElementById('score').innerText = counter;
       }
       
       document.getElementById('button').onclick = () => {
