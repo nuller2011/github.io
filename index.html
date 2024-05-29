@@ -11,7 +11,7 @@
             
         }
         #button {
-            height: 100px;
+            width: 70%;
            
         }
         
@@ -26,11 +26,16 @@
 
     <script>
       let counter = 0;
+      if (localStorage.box) {
+        counter =  Number(localStorage.box);
+      }
       
       document.getElementById('button').onclick = () => {
         counter = counter + 1;
         document.getElementById('score').innerText = counter;
+        localStorage.box = counter;
       };
+      
     </script>
 </body>
 </html>
