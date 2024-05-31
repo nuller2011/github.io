@@ -9,8 +9,7 @@
             #main {
                 text-align: center;
                 align-items: center;
-                margin-left: 30%; /* Отступ слева */
-                margin-right: 30%;
+                
             }
             #button {
                 width: 100%;
@@ -50,16 +49,19 @@
       <div id="main" data-bs-theme="dark">
         
         <h1 id="score"><br/> </h1>
-        
-        <div class="card" style="width: 18rem;">
-        <img src="chest.png" class="card-img-top" alt="chest">
-        <div class="card-body">
-        <h5 class="card-title">Chest number 12</h5>
-        <p class="card-text">Legendary</p>
-        <a onclick="dayChest();" class="btn btn-primary">Open</a>
-        </div>
+        <div class="container text-center">
+            <div class="row align-items-start">
+              <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="chest.png" class="card-img-top" alt="chest">
+                    <div class="card-body">
+                      <h5 class="card-title">Starter Chest</h5>
+                      <p class="card-text">Legendary</p>
+                      <a onclick="startChest();" class="btn btn-primary" >Open</a>
+                    </div>
                   </div>
-          
+            </div>
+              </div>
               
             </div>
           </div>
@@ -71,19 +73,21 @@
         counter =  Number(localStorage.box);
         document.getElementById('score').innerText = counter;
       }
-      
-        var currentDate = new Date();
+        
 
 
         
 
         
-        function dayChest() {
-            var currentTime = currentDate.getHours();
-            if (Number(currentTime) == 12) {
-                
+        function startChest() {
             
-                counter = counter + 500;
+            
+            
+
+            if (100 >= counter) {
+                
+                
+                counter = counter + 10000;
                 document.getElementById('score').innerText = counter;
                 localStorage.box = counter;
                 
